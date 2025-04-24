@@ -52,8 +52,8 @@ class DeepQNetwork(nn.Module):
             nn.Linear(512, noOfActions)
         )
 
-        # self.convolutionalLayers = nn.DataParallel(self.convolutionalLayers) #Make sure models use multi GPUs
-        # self.fullyConnectedLayers = nn.DataParallel(self.fullyConnectedLayers)
+        self.convolutionalLayers = nn.DataParallel(self.convolutionalLayers) #Make sure models use multi GPUs
+        self.fullyConnectedLayers = nn.DataParallel(self.fullyConnectedLayers)
 
         self.convolutionalLayers.to(device=device) #Make sure models are on the correct device (cpu or gpu)
         self.fullyConnectedLayers.to(device=device)
