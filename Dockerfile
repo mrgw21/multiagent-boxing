@@ -8,8 +8,9 @@ RUN apt-get update && apt-get install -y \
     python3.8 python3-pip \
     cmake build-essential ninja-build \
     zlib1g-dev libsdl2-dev git wget unzip \
-    libgl1-mesa-glx libglib2.0-0 libsm6 livxext6 livxrender-dev \
+    libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 
 # Copy requirements first to leverage Docker layer caching
 COPY requirements.txt .
