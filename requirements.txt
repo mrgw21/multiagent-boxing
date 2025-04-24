@@ -1,8 +1,8 @@
-# --- Core ML ---
+# Core ML
 torch
 torchvision
 
-# --- Atari + RL Environment ---
+# Atari and RL Environment
 gymnasium==1.1.1
 gym==0.26.2
 ale-py==0.10.1
@@ -12,7 +12,7 @@ AutoROM==0.4.2
 AutoROM.accept-rom-license==0.6.1
 pygame==2.3.0
 
-# --- Scientific / Logging ---
+# Plotting / Logging
 numpy>=1.22,<1.24
 matplotlib
 tqdm
@@ -20,10 +20,8 @@ cloudpickle
 requests
 click
 
-# --- Py3.10 compatibility (optional for py3.8) ---
+# Others
 typing_extensions
 importlib_resources
-
-# --- Additional dependencies for PPO training ---
 pandas
 openpyxl  # for Excel export
